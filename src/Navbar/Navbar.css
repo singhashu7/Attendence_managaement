@@ -1,0 +1,23 @@
+.header {
+    display :flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 60%;
+    
+
+    
+}
+
+.header-menu{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 50px;
+    color: white;
+}
+
+/* .header-menu>li:hover{
+    color: var(--orange);
+} */
