@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './Studentpage.css';
-import FilteredStudentsPage from './FilteredStudentsPage/FilteredStudentsPage';
+import FilteredStudentsPage from '../FilteredStudentsPage/FilteredStudentsPage';
 
 
 const Studentpage = () => {
   const [criteria, setCriteria] = useState('');
-  
+  const [filteredStudents] = useState([]);
 
   const studentData = [
     { name: 'Ashutosh Singh', attendance: 80 },

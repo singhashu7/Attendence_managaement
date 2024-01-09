@@ -10,11 +10,13 @@ import { useNavigate } from 'react-router-dom';
 const LoginSignup = () => {
     const [action,setAction]=useState("Login")
     const history = useNavigate();
+    
 
   const handleLogin = () => {
     // Perform login logic here...
 
     // Assuming the login is successful, navigate to the home page
+    
     history.go('/home');
   };
   return (

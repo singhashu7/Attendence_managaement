@@ -9,22 +9,24 @@ class college extends React.Component {
                 <form>
                     <label for="course">Select Course:</label>
                     <select id="course" name="course">
+                        <option value="none" selected display hidden>Course</option>
                         <option value="cs">MCA</option>
                         <option value="math">MBA</option>
-                        <option value="eng">BTECH</option>
-                        <option value="eng">B.PHARMA</option>
+                        <option value="btech">BTECH</option>
+                        <option value="bpharma">B.PHARMA</option>
                     </select>
 
                     <label for="semester">Select Semester:</label>
                     <select id="semester" name="semester">
-                        <option value="spring">1</option>
-                        <option value="summer">2</option>
-                        <option value="fall">3</option>
-                        <option value="winter">4</option>
+                        <option value="none" selected display hidden>Semester</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
 
                     </select>
                     <div className="btn">
-                    <button>Search</button>
+                    <button >Search</button>
                     </div>
                     
                 </form>
