@@ -4,9 +4,19 @@ import user_icon from'../Assets/person.png'
 import email_icon from'../Assets/email.png'
 import passwrod_icon from'../Assets/password.png'
 
+import { useNavigate } from 'react-router-dom';
+
 
 const LoginSignup = () => {
     const [action,setAction]=useState("Login")
+    const history = useNavigate();
+
+  const handleLogin = () => {
+    // Perform login logic here...
+
+    // Assuming the login is successful, navigate to the home page
+    history.go('/home');
+  };
   return (
     
     <div className='container'>
@@ -33,13 +43,12 @@ const LoginSignup = () => {
         {action==="Sign Up"?<div></div>:<div className="forgot-password">Lost password? <span>Click Here</span></div>}
         
         <div className="submit-container">
-            <div className={action==="Login"?"submit gray":"submit"} on onClick={()=>{setAction("Sign Up")}}>Sign up</div>
-            <div className={action==="Sign Up"?"submit gray":"submit"}
-            on onClick={()=>{setAction("Login")}}>Login</div>
+        <div className={action==="Login"?"submit gray":"submit"} on onClick={()=>{setAction("Sign Up")}}>Sign up</div>
+        <div className={action==="Sign Up"?"submit gray":"submit"}
+            on onClick={handleLogin}>Login</div>  
         </div>
-            
-      
     </div>
+    
   )
 }
 
